@@ -7,6 +7,7 @@ class PostController {
             const post = await PostService.create(req.body, req.files.picture)
             res.json(post)
         } catch (e) {
+            console.log(e);
             res.status(500).json(e)
         }
     }
